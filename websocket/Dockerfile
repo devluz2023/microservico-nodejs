@@ -17,4 +17,5 @@ COPY . .
 EXPOSE 3000
 
 # Command to run the application
-CMD ["node", "servidor.js"]
+CMD ["node", "src/servidor.js"]
+# CMD ["/bin/sh", "-c", "while true; do sleep 3600; done > /dev/null"]

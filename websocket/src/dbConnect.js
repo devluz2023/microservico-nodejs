@@ -1,7 +1,7 @@
 import { MongoClient } from "mongodb";
 
 const cliente = new MongoClient(
-  "mongodb+srv://dev:123@dev.lp6gdyc.mongodb.net/?retryWrites=true&w=majority"
+  "mongodb://dev:dev@mongodb:27017/websocket"
 );
 
 let documentosColecao;
@@ -9,7 +9,7 @@ let documentosColecao;
 try {
   await cliente.connect();
 
-  const db = cliente.db("alura-websockets");
+  const db = cliente.db("websockets");
   documentosColecao = db.collection("documentos");
 
   console.log("Conectado ao banco de dados com sucesso!");
